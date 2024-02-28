@@ -1,0 +1,215 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #efe6e6;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 7px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background:none;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(195, 163, 195);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+  }
+
+a {
+    text-decoration: none;
+    color:#FDFDFD;
+}
+
+.fundo{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: #efe6e6;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(52, 54, 109, 0.6);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+     display: flex;
+     animation: animate;
+     animation-duration: 1s;  
+}
+
+  a {
+    text-decoration: none;
+    color:#A6A6A6;
+    }
+    a:hover{
+        color:#FF66C4;
+    }
+
+.login{
+    width: 70vh;
+    height: 70vh;
+    background-color: #FDFDFD;
+    border-radius: 2vh;
+    justify-content: center;
+    display: grid;
+    grid-template-rows:20vh 15vh 5vh 10vh 10vh 10vh;
+    grid-template-areas:"lm lm"
+                        "fm fm"
+                        "bm bm"
+                        "ol ol"
+                        "cl cl"
+                        "en en";
+    animation: animate;
+    animation-duration: 1s;
+}
+
+.cad_modal{
+    width: 70vh;
+    height: 70vh;
+    background-color: #FDFDFD;
+    border-radius: 2vh;
+    justify-content: center;
+    display: grid;
+    grid-template-rows:20vh 20vh 5vh;
+    grid-template-areas:"lm lm"
+                        "fm fm"
+                        "bm bm";
+    animation: animate;
+    animation-duration: 1s;
+}
+
+
+.um{
+    height: 5vh;
+    width: 45vh;
+    background-color: #E6DAFF;
+    border-radius: 2vh;
+    border: none;
+    margin: 10px;
+    font-family: 'Questrial', sans-serif;
+    color: #8C52FF;
+    grid-area:fm;
+    padding: 0 40px;
+}
+
+.m_tit {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 3.0em;
+    margin: auto;
+    color:#8C52FF;
+    justify-content: center;
+    grid-area:lm;
+}
+
+.m_t {
+    font-family: 'Questrial', sans-serif;
+    font-size: 2.0em;
+    margin: auto;
+    color:#8C52FF;
+    justify-content: center;
+    grid-area:ol;
+}
+
+.encaminha{
+    font-family: 'Questrial', sans-serif;
+    font-size: 1.0em;
+    grid-area: en;
+    text-align: right;
+}
+
+#cadm{
+    height:5vh;
+    width:25vh;
+    border: none;
+    margin: auto;
+    border-radius: 15px;
+    background-color:#8C52FF;
+    font-family: 'Questrial', sans-serif;
+    font-size: 1.5em;
+    color: white;
+    transition: transform 0.2s;
+    grid-area:cl;
+}
+
+#cadm:hover{
+    color: white;
+        cursor: pointer;
+        transform: scale(1.1);}
+
+#entrar{
+        height:5vh;
+        width:25vh;
+        border: none;
+        margin: auto;
+        border-radius: 15px;
+        background-color: #FF66C4;
+        font-family: 'Questrial', sans-serif;
+        font-size: 1.5em;
+        color: white;
+        transition: transform 0.2s;
+        grid-area:bm;
+    }
+#entrar:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+
+
+
+@keyframes animate{
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+      }
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    /*RESPONSIVIDADE*/
+
+@media only screen and (min-width:1145px) and (max-width: 1500px) {
+    h1{
+          font-size: 1.5em;
+        }
+    #entrar, #cadm {
+        font-size: 1.0em;
+    }
+}
+
+@media only screen and (min-width:420px) and (max-width:630px){
+    .cad_modal, .login{
+        height: 100%;
+        width: 100%;
+        border-radius: 0vh;
+    }
+
+    .um{
+        width: 40vh;
+    }
+}
+
+@media only screen and (max-width:420px){
+    .cad_modal, .login{
+        height: 100%;
+        width: 100%;
+        border-radius: 0vh;
+    }
+
+    .um{
+        width: 30vh;
+    }
+    .m_tit{
+        font-size: 2.0em;
+    }
+}

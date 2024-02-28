@@ -1,0 +1,203 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@800&family=Questrial&display=swap');
+html, body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #efe6e6;
+  height: 100%;
+  gap: 2%;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background:none;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(195, 163, 195);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+/*NAVBAR*/
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav{
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  width: 80%;
+  margin-top: 10%;
+  font-family: 'Alegreya Sans', sans-serif;
+  color: #fff;
+  font-size: 2.5em;
+  align-items: center;
+  text-shadow: 1px 2px 5px rgb(29, 22, 29);
+}
+
+.perfil{
+  margin-left: 70%;
+  display: flex;
+  gap: 10px;
+  width: 8%;
+  align-items: center;
+  font-family: 'Questrial', sans-serif;
+}
+
+.sidenav{
+  font-family: 'Questrial', sans-serif;
+  color: white;
+}
+
+.material-icons.md-48 { font-size: 48px; }
+
+a{
+  color: white;
+  font-size: 48px;
+  margin-right: 1%;
+}
+
+a:hover{
+  text-decoration: none;
+  color: white;
+}
+
+#logout{
+  border: none;
+  background-color: none;
+  color: none;
+}
+/*SOBRE*/
+.sobre{
+  height: 100vh;
+  padding: 15%;
+}
+
+h1{
+  font-family: 'Alegreya Sans', sans-serif;
+  color: #8B53FF;
+}
+
+p{
+  font-family: 'Questrial', sans-serif;
+}
+
+h5{
+  font-family: 'Questrial', sans-serif;
+}
+
+/*EQUIPE*/
+
+.equipe{
+  display:grid;
+  height: 110vh;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "pessoa1 pessoa2 pessoa3";
+}
+
+.pessoa1{
+  grid-area: pessoa1;
+  padding: 20%;
+  text-align: center;
+  color:#efe6e6;
+  background-image: url('folhar.jpg');
+  background-size:cover;
+}
+
+.pessoa2{
+  grid-area: pessoa2;
+  padding: 20%;
+  text-align: center;
+  color:#efe6e6;
+  background-image: url('computador.jpg');
+  background-size:cover;
+}
+
+.pessoa3{
+  grid-area: pessoa3;
+  padding: 20%;
+  text-align: center;
+  color: #efe6e6;
+  background-image: url('livror.jpg');
+  background-size:cover;
+}
+
+/*MEMBROS*/
+
+.ana{
+  background-color: #d4c1fa;
+  height: 120vh;
+  text-align: center;
+  background-image: url('folha.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5%;
+}
+
+.nome{
+  color:#303030; 
+  font-size:6.0em;
+}
+
+.texto{
+  margin-top: 2%;
+  font-size: 1.5em;
+  font-family: 'Questrial', sans-serif;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.gustavo{
+  background-color: #a3d0db;
+  height: 120vh;
+  text-align: center;
+  background-image: url('computador.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5%;
+}
+
+.luis{
+  background-color: #c5a991;
+  height: 120vh;
+  text-align: center;
+  background-image: url('livro.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5%;
+}
+
+@media only screen and (min-width:1145px) and (max-width: 1500px) {
+  
+  .sobre{
+    margin-bottom: 10%;
+  }
+  .ana, .gustavo, .luis, .equipe{
+    height: 135vh;
+  }
+  .nome{
+    font-size: 4.0em;
+  }
+  
+  h3{
+    font-size: 0.6em;
+  }
+  .texto{
+    font-size: 1.2em;
+  }
+  .partes{
+    font-size: 1.0em;
+  }
+
+  h5{
+    font-size: 1.5em;
+  }
+}

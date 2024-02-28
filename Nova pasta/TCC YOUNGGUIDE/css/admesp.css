@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@800&family=Questrial&display=swap');
+html, body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #efe6e6;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background:none;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(195, 163, 195);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+/*NAVBAR*/
+
+.header{
+  display: flex;
+  align-items: center;
+}
+.nav{
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  margin-top: 10%;
+  margin-left: 10%;
+  align-items: center;
+  text-shadow: 1px 2px 5px rgb(29, 22, 29);
+}
+
+.sidenav{
+  font-family: 'Questrial', sans-serif;
+  color: white;
+}
+
+
+.material-icons.md-48 { font-size: 48px; }
+
+a{
+  color: white;
+  font-size: 48px;
+  margin-right: 1%;
+}
+
+a:hover{
+  text-decoration: none;
+  color: white;
+}
+
+  .container{
+    padding-top: 5%;
+    background-color: #fdfdfd;
+    height: 100vh;
+  }
+  h1{
+    font-family:'Alegreya Sans', sans-serif;
+    color:#8C52FF ;
+    margin-left: 5%;
+  }
+
+  h4{
+    font-family: 'Questrial', sans-serif;
+    color: #5EC9CC;
+    margin-left: 5%;
+    margin-bottom: 5%;
+  }
+
+  .sugestoes{
+    background-color: #fdfdfd;
+    height: 100vh;
+  }
+
+
+  .fundo{
+    width: 100%;
+    height: auto;
+    background-color: #fdfdfd;
+    margin: auto;
+    padding: 2%;
+    flex-wrap: wrap;
+    border-bottom: 3px solid #E6DAFF;
+  }
+
+  .fundo:hover{
+    background-color: #efe6e6;
+  }
+
+  .perfil{
+    width: 7%;
+    display: flex;
+    align-items: center;
+    font-family:'Alegreya Sans', sans-serif;
+    color:#8C52FF ;
+  }
+
+  .usuario{
+    margin: auto;
+  }
+
+  .mensagem{
+    display: grid;
+    grid-template-areas: ".info .botoes";
+    grid-template-columns: 70% 30%;
+  }
+
+  .info{
+    width: 100%;
+  }
+
+  .infoli{
+    font-family:'Alegreya Sans', sans-serif;
+    color:#8C52FF ;
+    font-size: 2.0em;
+    display: grid;
+    grid-template-areas: ".lit .infospan";
+    grid-template-columns: 50% 50%;
+  }
+
+    .lit{
+        text-align: end;
+        margin: auto;
+        width: 70%;
+    }
+
+  .infospan{
+    margin-right: 10%;
+    font-family: 'Questrial', sans-serif;
+    font-size: 0.7em;
+    color:#222222 ;
+    background: #E6DAFF;
+    padding: 1%;
+    height: 4vh;
+    text-align: center;
+  }
+
+  .curriculo {
+    grid-column: 1 / span 2; /* Ocupa duas colunas */
+  }
+
+  .curriculo{
+    margin-left: 65%;
+    width: 100%;
+    height: 5vh;
+    padding: 2%;
+    background-color: #FF66C4;
+    color: white;
+    font-family: 'Questrial', sans-serif;
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 2%;
+  }
+
+
+
+  .botoes{
+    display: flex;
+    gap: 2%;
+    margin-right: 2%;
+    text-align: center;
+    margin: auto;
+  }
+
+  .enviar{
+    margin: 10%;
+    border: none;
+    height: 70%;
+    width: 70%;
+    border-radius: 15px;
+    background-color: #8C52FF;
+    color: white;
+    font-family: 'Questrial', sans-serif;
+    transition: transform 0.2s;
+  }
+
+  .enviar:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+

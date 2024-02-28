@@ -1,0 +1,319 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #efe6e6;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 7px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background:none;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(195, 163, 195);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+  }
+
+.container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:90vh 70vh 70vh 50vh;
+    grid-template-areas:"he hd"
+                        "me md"
+                        "ae ad"
+                        "f  f";
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    }
+
+/*HEADER*/
+
+
+.headeresq{
+    background-color: #FDFDFD;
+    grid-area:he;
+    text-align: center;
+}
+.texto{
+    display:flexbox;
+    text-align: center;
+    margin-top: 20%;
+}
+
+    #cadastro{
+        height:5vh;
+        width:25vh;
+        margin-right: 4vh;
+        margin-left: 8vh;
+        border: none;
+        border-radius: 15px;
+        background-color: #8C52FF;
+        font-family: 'Questrial', sans-serif;
+        font-size: 1.5em;
+        transition: transform 0.2s;  
+    }
+    #cadastro:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+
+    #login{
+        height:5vh;
+        width:25vh;
+        margin: auto;
+        border: none;
+        border-radius: 15px;
+        background-color: #FF66C4;
+        font-family: 'Questrial', sans-serif;
+        font-size: 1.5em;
+        transition: transform 0.2s;
+    }
+    #login:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+
+.headerdir{
+        background-color: #FDFDFD;
+        grid-area:hd;
+        text-align: center;
+    }
+
+.midiat{
+    margin: auto;
+    width: 80%;
+}
+
+.midia{
+    margin: auto;
+    width: 70%;
+}
+
+
+/*MAIN*/
+
+
+.maindir{
+    background-color: #FDFDFD;
+    grid-area:md;
+    text-align: center;
+}
+
+.mainesq{
+    background-color: #FDFDFD;
+    grid-area:me;
+    text-align: center;
+}
+
+iframe{
+    margin-top: 10%;
+    width:70%;
+    height:50%;
+}
+
+.main_texto{
+    font-family: 'Questrial', sans-serif;
+    width: 60vh;
+    font-size: 2.0em;
+    margin: auto;
+    color: #303030;
+    display:flexbox;
+    text-align: center;
+    margin-top: 20%;
+    
+}
+
+/*ASIDE*/
+
+.asideesq{
+    background-color: #FDFDFD;
+    grid-area:ae;
+    text-align: center;
+}
+
+.asidedir{
+    background-color: #FDFDFD;
+    grid-area:ad;
+    text-align: center;
+}
+
+.bora{
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 5.0em;
+    margin: auto;
+    color: #FF66C4;
+    display:flexbox;
+    text-align: center;
+    margin-top: 20%;
+}
+.aside_texto{
+    margin: auto;
+    display:flexbox;
+    text-align: center;
+    margin-top: 20%;
+}
+
+/*FOOTER*/
+
+.footer{
+    background-color:#8672af;
+    grid-area:f;
+}
+
+[data-anime]{
+    opacity: 0;
+    transition: 1s;
+}
+
+[data-anime="inicio"]{
+    transform:translate3d(-50px,0px,0px);
+}
+[data-anime="meio"]{
+    transform:translate3d(50px,0px,0px);
+}
+[data-anime="baixo"]{
+    transform:translate3d(-50px,0px,0px);
+}
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0px,0px,0px);
+}
+
+/*RESPONSIVIDADE*/
+
+@media only screen and (min-width:1145px) and (max-width: 1500px) {
+    .container{
+        grid-template-rows: 90vh 90vh 80vh 50vh;
+    }
+    .main_texto{
+        font-size: 1.5em;
+    }
+    #cadastro, #login{
+        font-size:1.0em;
+    }
+    video{
+        width: 600px;
+        height: 340px;
+        margin-top: 10%;
+    }
+}
+
+@media only screen and (min-width:940px) and (max-width:1145px) {
+    .container{
+        grid-template-areas:"he hd"
+                            "me md"
+                            "ae ad"
+                            "f  f";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:50vh  50vh  40vh  10vh;
+}
+    #cadastro, #login{
+        max-width: 15vh;
+        font-size: 15px;
+    }
+p {
+    font-size: 20px;
+}
+img {
+    max-width: 70%;
+    height: auto;
+}
+
+}
+
+@media only screen and (min-width:571px) and (max-width:939px){
+    .container{
+        grid-template-areas:"hd"
+                            "he"
+                            "me"
+                            "md"
+                            "ae"
+                            "ad"
+                            "f";
+        grid-template-columns: 1fr;
+        grid-template-rows:50vh 50vh 60vh 30vh 50vh 40vh 10vh;
+    }
+    .texto , .main_texto, .aside_texto{
+        margin-top: 0;
+    }
+    p {
+        font-size: 25px;
+    }
+    img {
+        max-width: 50%;
+        height: auto;
+    }
+}
+
+@media only screen and (min-width:420px) and (max-width:570px){
+    .container{
+        grid-template-areas:"hd"
+                            "he"
+                            "me"
+                            "md"
+                            "ae"
+                            "ad"
+                            "f";
+        grid-template-columns: 1fr;
+        grid-template-rows:40vh 40vh 40vh 30vh 30vh 40vh 10vh;
+    }
+
+    #cadastro, #login{
+        margin-left: 0;
+        max-width: 15vh;
+        font-size: 15px;
+    }
+    .texto , .main_texto, .aside_texto{
+        margin-top: 0;
+    }
+    .main_texto{
+        width: 50vh;
+    }
+    p {
+        font-size: 25px;
+    }
+    img {
+        max-width: 50%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width:420px){
+    .container{
+        grid-template-areas:"hd"
+                            "he"
+                            "me"
+                            "md"
+                            "ae"
+                            "ad"
+                            "f";
+        grid-template-columns: 1fr;
+        grid-template-rows:40vh 40vh 40vh 30vh 30vh 30vh 10vh;
+    }
+
+    #cadastro, #login{
+        margin-left: 0;
+        max-width: 15vh;
+        font-size: 15px;
+    }
+    .texto , .main_texto, .aside_texto{
+        margin-top: 0;
+    }
+    .main_texto{
+        width: 30vh;
+    }
+    p {
+        font-size: 20px;
+    }
+    img {
+        max-width: 50%;
+        height: auto;
+    }
+}

@@ -1,0 +1,268 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@800&family=Questrial&display=swap');
+html, body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #efe6e6;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background:none;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(195, 163, 195);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+/*NAVBAR*/
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav{
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  width: 80%;
+  margin-top: 10%;
+  font-family: 'Alegreya Sans', sans-serif;
+  color: #fff;
+  font-size: 2.5em;
+  align-items: center;
+  text-shadow: 1px 2px 5px rgb(29, 22, 29);
+}
+
+.perfilnav{
+  margin-left: 70%;
+  display: flex;
+  gap: 10px;
+  width: 8%;
+  align-items: center;
+  font-family: 'Questrial', sans-serif;
+}
+
+
+.logo{
+  margin-top: 3%;
+}
+
+.sidenav{
+  font-family: 'Questrial', sans-serif;
+  color: white;
+}
+
+.material-icons.md-48 { font-size: 48px; }
+
+a{
+  color: white;
+  font-size: 48px;
+  margin-right: 1%;
+}
+
+a:hover{
+  text-decoration: none;
+  color: white;
+}
+
+  .container{
+    display: grid;
+    grid-template-areas:"postagem"
+                        "comenta";
+    padding-top: 10%;
+    gap: 5%;
+}
+
+.postagem{
+    display: grid;
+    grid-template-areas:"topo topo"
+                        "blog blog"
+                        "foto textoperfil";
+    align-items: center;
+}
+
+.topo, .blog {
+  grid-column: 1 / span 2; /* Ocupa duas colunas */
+}
+.topo{
+    display: flex;
+    background-color: #FDFDFD;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 2%;
+}
+
+.titulo{
+  width: 50%;
+  padding: 2%;
+}
+
+h1, h2{
+  font-family: 'Alegreya Sans', sans-serif;
+  color:#8C52FF;
+}
+
+.icones{
+    padding: 2%;
+    margin-top: 5%;
+}
+
+.material-icons.md-48 { 
+  font-size: 48px;
+ }
+
+#curtir, #salva{
+  background-color:#FDFDFD;
+  border: none;
+  transition: transform 0.2s; 
+}
+
+#curtir:hover{
+  color: red;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+#salva:hover{
+  color: blueviolet;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.blog{
+  background-color: #FDFDFD;
+  margin: auto;
+  border-top: 3px solid #E6DAFF;
+  border-bottom: 3px solid #E6DAFF;
+  text-align: justify;
+  padding: 2%;
+  width: 80%;
+  height: auto;
+}
+
+.pe{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "foto perfil";
+    background-color: #FDFDFD;
+    width: 80%;
+    height: 50vh;
+    margin: auto;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.foto, .perfil{
+  margin: auto;
+  padding: 15%;
+}
+
+
+.fundo{
+  margin: auto;
+  text-align: justify;
+  padding: 20px;
+  background-color: #FDFDFD;
+  width: 80%;
+  height: auto;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.coment{
+  margin: auto;
+  margin-bottom: 5%;
+  width: 80%;
+  height: 40vh;
+  background-color: #FDFDFD;
+  border-radius: 2%;
+  border: 3px solid #E6DAFF;
+}
+
+.imagem-coment{
+  display: flex;
+  width: 20%;
+  height: 20%;
+  padding-top: 5px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  gap: 5px;
+}
+.usu{
+  font-size: 35px;
+  margin-top: 5%;
+  font-family: 'Questrial', sans-serif;
+  color: #7E2778;
+}
+
+.conteudo{
+  position: relative;
+  border-top: 3px solid #E6DAFF;
+  border-bottom: 3px solid #E6DAFF;
+  text-align: justify;
+  background-color:#FDFDFD;
+  height: 22vh;
+  width: 100%;
+  padding: 2%;
+}
+
+textarea{
+  box-sizing: border-box;
+  resize: none;
+  color:#7E2778;
+  background:none;
+  border: none;
+  height:100%;
+  width: 100%;
+  font-family: 'Questrial', sans-serif;
+}
+
+.enviar{
+  height:5vh;
+  width:15vh;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  background-color: #8C52FF;
+  font-family: 'Questrial', sans-serif;
+  font-size: 1.5em;
+  transition: transform 0.2s;
+  margin-left: 75%;
+  margin-top: 2%;
+}
+
+.enviar:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+    /*RESPONSIVIDADE*/
+
+    @media only screen and (min-width:1145px) and (max-width: 1500px) {
+      h3{
+        font-size: 0.8em;
+      }
+      h1{
+        font-size: 3.0em;
+      }
+      .icones{
+        margin-left: 5%;
+      }
+
+      .enviar{
+        font-size: 1.0em;
+        height: 4vh;
+      }
+  }

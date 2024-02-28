@@ -1,0 +1,419 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@800&family=Questrial&display=swap');
+html, body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #efe6e6;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background:none;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(195, 163, 195);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+/*NAVBAR*/
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav{
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  width: 80%;
+  margin-top: 10%;
+  font-family: 'Alegreya Sans', sans-serif;
+  color: #fff;
+  font-size: 2.5em;
+  align-items: center;
+  text-shadow: 1px 2px 5px rgb(29, 22, 29);
+}
+
+.perfil{
+  margin-left: 70%;
+  display: flex;
+  gap: 10px;
+  width: 8%;
+  align-items: center;
+  font-family: 'Questrial', sans-serif;
+}
+
+.sidenav{
+  font-family: 'Questrial', sans-serif;
+  color: white;
+}
+
+.material-icons.md-48 { font-size: 48px; }
+
+a{
+  color: white;
+  font-size: 48px;
+  margin-right: 1%;
+}
+
+a:hover{
+  text-decoration: none;
+  color: white;
+}
+
+#logout{
+  border: none;
+  background-color: none;
+  color: none;
+}
+
+/*CARROSEL*/
+.caramba{
+  filter: brightness(48%) blur(2px);
+}
+
+
+
+
+/*POSTAGENS*/
+
+.postagens{
+  height: 90vh;
+  text-align: center;
+}
+
+.guides{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-family:'Alegreya Sans', sans-serif;
+  color: #8B53FF;
+}
+
+.book{
+  height: 20vh;
+}
+
+
+.post{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper {
+  max-width: 1400px;
+  width: 100%;
+  position: relative;
+}
+.wrapper i {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+  z-index: 2;
+}
+.wrapper i:active{
+  transform: translateY(-50%) scale(0.85);
+}
+.wrapper i:first-child{
+  left: -22px;
+}
+.wrapper i:last-child{
+  right: -22px;
+}
+.wrapper .carosel{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 4) - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 6px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.carosel::-webkit-scrollbar {
+  display: none;
+}
+.carosel.no-transition {
+  scroll-behavior: auto;
+}
+.carosel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carosel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+.carosel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carosel .card {
+  scroll-snap-align: start;
+  height: 45vh;
+  width: 80%;
+  list-style: none;
+  background: #fff;
+  cursor: pointer;
+  padding-bottom: 15px;
+  flex-direction: column;
+  border-radius: 8px;
+}
+.carosel .card .img {
+  background: #8B53FF;
+  height: 148px;
+  width: 148px;
+  border-radius: 50%;
+}
+.card .img img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+}
+.carosel .card h2 {
+  font-weight: 500;
+  font-size: 1.56rem;
+  margin: 30px 0 5px;
+}
+.carosel .card span {
+  color: #6A6D78;
+  font-size: 1.31rem;
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper .carosel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper .carosel {
+    grid-auto-columns: 100%;
+  }
+}
+
+/*QUESTIONÁRIO*/
+
+.titulo{
+  grid-column: 1 / span 2;
+  color: #8B53FF;
+  font-family: 'Alegreya Sans', sans-serif;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.questionario{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+    grid-template-areas:"titulo titulo"
+                        "grafico conteudo";
+  gap: 5%;  
+  height: 90vh;
+}
+
+.grafico{
+  grid-area:grafico;
+
+}
+
+.conteudo{
+  grid-area: conteudo;
+  text-align: center;
+}
+
+#quest{
+  margin-top: 10%;
+  height:10vh;
+  width:60%;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  background-color:#FF66C4;
+  font-family: 'Questrial', sans-serif;
+  font-size: 1.0em;
+  transition: transform 0.2s;
+}
+
+#quest:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/*FOOTER*/
+
+
+.texto{
+  text-align:justify;
+  color: #321867;
+}
+
+.postagens, .questionario{
+  visibility: hidden;
+}
+
+/*ESPECIALISTAS*/
+
+h1{
+  font-family: 'Alegreya Sans', sans-serif;
+  color: #8B53FF;
+}
+
+.especialistas{
+  height: 80vh;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  
+}
+
+.perfils{
+  overflow-y: scroll;
+  width: 70%;
+  height: 50vh;
+  margin: auto;
+  padding: 1%;
+  border-radius: 2%;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background-color:#FDFDFD;
+}
+
+.esp{
+  display: flex;
+  gap: 2%;
+  width: 100%;
+  height: 12vh;
+  padding: 1%;
+  border-bottom: 3px solid #E6DAFF;
+}
+
+h2{
+  font-family: 'Alegreya Sans', sans-serif;
+  color: #8B53FF;
+  margin: 1%;
+  transition: transform 0.2s;  
+}
+
+h2:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+p{
+  margin-left: auto;
+  font-size: 1.5em;
+  font-family: 'Questrial', sans-serif;
+}
+
+.perfils::-webkit-scrollbar {
+  width: 7px;               /* width of the entire scrollbar */
+}
+
+.perfils::-webkit-scrollbar-track {
+  background:none;        /* color of the tracking area */
+}
+
+.perfils::-webkit-scrollbar-thumb {
+  background-color: rgb(195, 163, 195);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+/*RESPONSIVIDADE*/
+
+@media only screen and (min-width:1145px) and (max-width: 1500px) {
+  .titulo{
+    font-size: 3.0em;
+  }
+
+  h3{
+    font-size: 0.6em;
+  }
+
+  h4{
+    font-size: 1.5em;
+  }
+
+  #quest{
+    width: 90%;
+  }
+
+  .wrapper {
+  max-width: 1200px;
+}
+
+}
+
+
+@media only screen and (min-width:940px) and (max-width:1144px) {
+
+}
+
+@media only screen and (min-width:571px) and (max-width:939px){
+
+}
+
+@media only screen and (min-width:420px) and (max-width:570px){
+  
+}
+
+@media only screen and (max-width:420px){
+  h3{
+    font-size: 30px;
+  }
+
+  .perfil{
+    display: none;
+  }
+
+  h1{
+    font-size: 40px;
+  }
+
+  .guides{
+    margin-right:20%;
+  }
+
+  .book{
+    height: 10vh;
+  }
+
+  .carrosel .card{
+    width: 30%;
+
+  }
+
+  .questionario{
+    display: grid;
+    grid-template-rows:10vh 40vh 30vh;
+      grid-template-areas:"titulo"
+                          "grafico"
+                          "conteudo";
+  }
+
+  .titulo{
+    margin: auto;
+    padding: 5%;
+  }
+}

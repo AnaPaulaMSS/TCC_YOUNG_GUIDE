@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@800&family=Questrial&display=swap');
+html, body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #efe6e6;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background:none;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(195, 163, 195);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+/*NAVBAR*/
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav{
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  width: 80%;
+  margin-top: 10%;
+  font-family: 'Alegreya Sans', sans-serif;
+  color: #fff;
+  font-size: 2.5em;
+  align-items: center;
+  text-shadow: 1px 2px 5px rgb(29, 22, 29);
+}
+
+.perfil{
+  margin-left: 70%;
+  display: flex;
+  gap: 10px;
+  width: 8%;
+  align-items: center;
+  font-family: 'Questrial', sans-serif;
+}
+
+.sidenav{
+  font-family: 'Questrial', sans-serif;
+  color: white;
+}
+
+.material-icons.md-48 { font-size: 48px; }
+
+a{
+  color: white;
+  font-size: 48px;
+  margin-right: 1%;
+}
+
+a:hover{
+  text-decoration: none;
+  color: white;
+}
+
+#logout{
+  border: none;
+  background-color: none;
+  color: none;
+}
+
+.turbowyg {
+    background-color:#efe6e6;
+    height: 90vh;
+    width: 100%;
+    margin-top: 5%;
+    padding: 2%;
+    padding-left: 10%;
+  }
+  
+  h1{
+    font-family: 'Alegreya Sans', sans-serif;
+    color: #8B53FF;
+  }
+  
+  input{
+    max-width: 30%;
+  }
+  
+  .enviar{
+    height:5vh;
+    width:15vh;
+    color: white;
+    margin-left: 85%;
+    border: none;
+    border-radius: 15px;
+    background-color: #8C52FF;
+    font-family: 'Questrial', sans-serif;
+    font-size: 1.5em;
+    transition: transform 0.2s;
+  }
+  
+  .enviar:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  /*RESPONSIDADE*/
+
+  @media only screen and (min-width:1145px) and (max-width: 1500px) {
+    .enviar{
+      font-size: 1.0em;
+    }
+    footer{
+      margin-top: 15%;
+    }
+
+    h3{
+      font-size: 0.6em;
+    }
+  }

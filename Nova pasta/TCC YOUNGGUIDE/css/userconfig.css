@@ -1,0 +1,220 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@800&family=Questrial&display=swap');
+html, body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #efe6e6;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background:none;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(195, 163, 195);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+/*NAVBAR*/
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo{
+  margin-top: 3%;
+}
+.nav{
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  width: 80%;
+  margin-top: 10%;
+  font-family: 'Alegreya Sans', sans-serif;
+  color: #fff;
+  font-size: 2.5em;
+  align-items: center;
+  text-shadow: 1px 2px 5px rgb(29, 22, 29);
+}
+
+
+.sidenav{
+  font-family: 'Questrial', sans-serif;
+  color: white;
+}
+
+.material-icons.md-48 { font-size: 48px; }
+
+a{
+  color: white;
+  font-size: 48px;
+  margin-right: 1%;
+}
+
+a:hover{
+  text-decoration: none;
+  color: white;
+}
+
+#logout{
+  border: none;
+  background-color: none;
+  color: none;
+}
+
+.containe{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin-top: 5%;
+}
+
+.quad{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:"perfil ferramentas";
+    width: 90%;
+    height: 80%;
+    background: #FDFDFD;
+    box-shadow: 3px 3px 1px 0px #00000060
+}
+
+.perfil{   
+    text-align: center;
+    padding: 10%;
+    align-items: center;
+    align-content: center;
+    
+}
+.circle{
+   width: 60%;
+}
+
+
+
+.ferramentas{
+    text-align: center;
+    list-style: none;
+    padding: 2%;
+}
+
+.collapsible-body{
+  background-color: #f4efff;
+}
+
+h1{
+    font-family: 'Alegreya Sans', sans-serif;
+    color: #8C52FF;
+    font-size: 3.0em;
+}
+
+h2{
+    font-family: 'Alegreya Sans', sans-serif;
+    color: #8C52FF;
+}
+
+ul{
+    list-style: none;
+    width: 100%;
+    padding-inline-start: 0;
+
+}
+
+
+  .foto{
+    height: 5vh;
+    width: 30%;
+    border: none;
+    margin: 10px;
+    font-family: 'Questrial', sans-serif;
+    font-size: 0.2;
+    color: #8C52FF;
+    padding: 0 40px;
+}
+  .um{
+    height: 5vh;
+    width: 30%;
+    background-color: #E6DAFF;
+    border-radius: 2vh;
+    border: none;
+    margin: 10px;
+    font-family: 'Questrial', sans-serif;
+    color: #8C52FF;
+    grid-area:fm;
+    padding: 0 40px;
+}
+
+#enviar{
+    font-family: 'Questrial', sans-serif;
+    color: #8C52FF;
+    border: none;
+    background-color:#efe6e6;
+    transition: transform 0.2s;
+    font-size: 0.9em;
+}
+
+#enviar:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/*RESPONSIVIDADE*/
+
+
+@media only screen and (min-width:1145px) and (max-width: 1500px) {
+  h3{
+    font-size: 0.8em;
+  }
+  .logo{
+    margin-top: 3%;
+  }
+}
+
+@media only screen and (min-width:940px) and (max-width:1145px) {
+  .logo{
+    display: none;
+  }
+}
+
+@media only screen and (min-width:571px) and (max-width:939px){
+  .logo{
+    display: none;
+  }
+  .quad{
+    height: 90%;
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 60% 50%;
+    grid-template-areas:"perfil"
+                        "ferramentas";
+  }
+}
+
+
+@media only screen and (max-width:570px){
+
+  .header{
+    margin-top: 10%;
+  }
+    .logo{
+      display: none;
+    }
+  .quad{
+    height: 90%;
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 40% 50%;
+    grid-template-areas:"perfil"
+                        "ferramentas";
+}
+
+}
